@@ -6,11 +6,14 @@ final class Access
 {
     public const ROLES = [
         'admin' => [
-            'dashboard.view',
             'users.view',
             'users.create',
             'users.update',
             'users.delete',
+            'roles.view',
+            'roles.create',
+            'roles.update',
+            'roles.delete',
         ]
     ];
 
