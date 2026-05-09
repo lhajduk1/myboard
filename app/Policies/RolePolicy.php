@@ -45,7 +45,9 @@ class RolePolicy
      */
     public function delete(User $user, Role $model): bool
     {
-        return $user->can($this->prefix . 'delete');
+        return $user->can($this->prefix . 'delete') && ! in_array($model->name, [
+            'admin',
+        ], true);
     }
 
     /**
@@ -61,6 +63,8 @@ class RolePolicy
      */
     public function forceDelete(User $user, Role $model): bool
     {
-        return $user->can($this->prefix . 'delete');
+        return $user->can($this->prefix . 'delete') && ! in_array($model->name, [
+            'admin',
+        ], true);
     }
 }
