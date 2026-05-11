@@ -14,6 +14,10 @@ final class Access
             'roles.create',
             'roles.update',
             'roles.delete',
+            'pages.view',
+            'pages.create',
+            'pages.update',
+            'pages.delete'
         ]
     ];
 
